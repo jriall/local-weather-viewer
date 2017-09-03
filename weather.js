@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //variable setting
 
-    var unitSwap = true;
+    var unitSwap = false;
     var long;
     var lat;
     var far;
@@ -42,12 +42,12 @@ $(document).ready(function() {
                 //change temp and windspeed to imperial or back
 
                 if (unitSwap === false) {
-                    $("#temp").html(Math.round(far) + "&degF");
+                    $("#temp").html("Temp: " + Math.round(far) + "&degF");
                     $("#windspeed").html("Wind Speed: " + Math.round(mph) + " mph");
                     unitSwap = true;
                     $("#tempSwapButton").html("Change to  Metric");
                 } else {
-                    $("#temp").html(Math.round(cel) + "&degC");
+                    $("#temp").html("Temp: " + Math.round(cel) + "&degC");
                     $("#windspeed").html("Wind Speed: " + Math.round(kph) + " kph");
                     unitSwap = false;
                     $("#tempSwapButton").html("Change to Imperial");
