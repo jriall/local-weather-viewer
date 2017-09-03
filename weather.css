@@ -1,0 +1,26 @@
+body {
+    color: white;
+}
+
+#tempSwapButton {
+    color: black;
+}
+
+h1 {
+    font-family: lobster;
+    font-size: 80px;
+    text-align: center;
+}
+
+#background {
+    background: url('http://res.cloudinary.com/jamesriall/image/upload/v1465559141/spring-rain-high-quality-resolution-wallpaper_mmkhpo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#tempSwapButton {
+    margin-top: 20px;
+}
