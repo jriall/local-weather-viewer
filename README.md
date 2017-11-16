@@ -2,7 +2,7 @@
 
 
 
-##The Project
+## The Project
 
 The page shows gets geolocation data through the IP-API and then displays local weather information to the user through data pulled from the Open Weather API in JSON format.
 
