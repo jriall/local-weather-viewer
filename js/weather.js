@@ -16,13 +16,14 @@ $(document).ready(function() {
     var city;
 
     //get geolocation data
-
-    $.getJSON("https://cors-anywhere.herokuapp.com/https://crossorigin.me/http://ip-api.com/json", function(dataLoc) {
-        lat = dataLoc.lat;
-        long = dataLoc.lon;
-
+    var latlng = navigator.geolocation.getCurrentPosition(showPosition);
+    function showPosition(position) {
+        lat = position.coords.latitude;
+        long = position.coords.longitude;
+        getWeather();
+}
         //api call, variable setting and basic data mapping
-
+        function getWeather() {
         var api = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=95cb066d694049e32c48e0101817e622";
         $.getJSON(api, function(data) {
             city = data.name;
@@ -121,5 +122,6 @@ $(document).ready(function() {
                     break;
             }
         });
+}
     });
-});
+// });
