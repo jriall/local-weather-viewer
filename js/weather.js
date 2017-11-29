@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     //get geolocation data
 
-    $.getJSON("http://ip-api.com/json", function(dataLoc) {
+    $.getJSON("https://crossorigin.me/http://ip-api.com/json", function(dataLoc) {
         lat = dataLoc.lat;
         long = dataLoc.lon;
 
