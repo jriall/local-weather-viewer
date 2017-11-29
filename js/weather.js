@@ -17,13 +17,13 @@ $(document).ready(function() {
 
     //get geolocation data
 
-    $.getJSON("https://crossorigin.me/http://ip-api.com/json", function(dataLoc) {
+    $.getJSON("https://cors-anywhere.herokuapp.com/https://crossorigin.me/http://ip-api.com/json", function(dataLoc) {
         lat = dataLoc.lat;
         long = dataLoc.lon;
 
         //api call, variable setting and basic data mapping
 
-        var api = "http://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=95cb066d694049e32c48e0101817e622";
+        var api = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=95cb066d694049e32c48e0101817e622";
         $.getJSON(api, function(data) {
             city = data.name;
             kelvin = data.main.temp;
